@@ -32,7 +32,7 @@
         label {
             margin: 10px 0 5px;
         }
-        input, textarea {
+        input {
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid #ddd;
@@ -59,13 +59,19 @@
         </form>
     </div>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzxPAzD7F6c3XXXXXXXXXXXXXXX/exec';  // Reemplaza esta URL con la URL de tu script de Google Apps
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyr41Jy6mmYDOdn0LU83Jxu8QNPXb6vSC4c8roO5wM7a7bE0pIBDxx1Z6cyAiyBCbac/exec';  // Tu URL de Google Apps Script
         const form = document.forms['simpleForm'];
 
         form.addEventListener('submit', e => {
           e.preventDefault();
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => alert('¡Datos enviados exitosamente!'))
+            .then(response => {
+              if (response.ok) {
+                alert('¡Datos enviados exitosamente!');
+              } else {
+                throw new Error('Error en la respuesta del servidor');
+              }
+            })
             .catch(error => console.error('Error!', error.message));
         });
     </script>
