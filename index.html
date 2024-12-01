@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enviar Datos a Google Sheets</title>
+    <title>Materiales de Caseta</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,6 +31,14 @@
         }
         .section {
             margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            margin-top: 0;
         }
         label {
             margin: 10px 0 5px;
@@ -39,13 +47,7 @@
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid #ddd;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
+            width: calc(100% - 22px);
         }
         button {
             padding: 10px;
@@ -53,6 +55,7 @@
             color: #fff;
             border: none;
             cursor: pointer;
+            margin-top: 20px;
         }
         button:hover {
             background: #555;
@@ -61,74 +64,37 @@
 </head>
 <body>
     <div class="container">
-        <h1>Formulario Avanzado</h1>
+        <h1>Materiales de Caseta</h1>
         <form id="advancedForm">
             <div class="section">
-                <h2>Sección 1</h2>
-                <ul>
-                    <li>
-                        <label for="data1">Dato 1:</label>
-                        <input type="text" id="data1" name="data1" required>
-                    </li>
-                    <li>
-                        <label for="data2">Dato 2:</label>
-                        <input type="text" id="data2" name="data2" required>
-                    </li>
-                    <li>
-                        <label for="data3">Dato 3:</label>
-                        <input type="text" id="data3" name="data3">
-                    </li>
-                    <li>
-                        <label for="data4">Dato 4:</label>
-                        <input type="text" id="data4" name="data4">
-                    </li>
-                    <li>
-                        <label for="data5">Dato 5:</label>
-                        <input type="text" id="data5" name="data5">
-                    </li>
-                </ul>
+                <h2>Datos del Solicitante</h2>
+                <label for="data1">Nombre y Apellidos:</label>
+                <input type="text" id="data1" name="data1" required>
+                <label for="data2">Número del Control:</label>
+                <input type="text" id="data2" name="data2" required>
+                <label for="data3">Correo Electrónico Institucional:</label>
+                <input type="email" id="data3" name="data3" required>
+                <label for="data4">N° de Aula:</label>
+                <input type="text" id="data4" name="data4" required>
+                <label for="data5">Actividad a Realizar:</label>
+                <input type="text" id="data5" name="data5" required>
             </div>
             <div class="section">
-                <h2>Sección 2</h2>
-                <ul>
-                    <li>
-                        <label for="data6">Dato 6:</label>
-                        <input type="text" id="data6" name="data6">
-                    </li>
-                    <li>
-                        <label for="data7">Dato 7:</label>
-                        <input type="text" id="data7" name="data7">
-                    </li>
-                    <li>
-                        <label for="data8">Dato 8:</label>
-                        <input type="text" id="data8" name="data8">
-                    </li>
-                    <li>
-                        <label for="data9">Dato 9:</label>
-                        <input type="text" id="data9" name="data9">
-                    </li>
-                    <li>
-                        <label for="data10">Dato 10:</label>
-                        <input type="text" id="data10" name="data10">
-                    </li>
-                    <li>
-                        <label for="data11">Dato 11:</label>
-                        <input type="text" id="data11" name="data11">
-                    </li>
-                    <li>
-                        <label for="data12">Dato 12:</label>
-                        <input type="text" id="data12" name="data12">
-                    </li>
-                </ul>
-            </div>
-            <div class="section">
-                <h2>Sección 3</h2>
-                <ul>
-                    <li>
-                        <label for="data13">Dato 13:</label>
-                        <input type="text" id="data13" name="data13">
-                    </li>
-                </ul>
+                <h2>Materiales</h2>
+                <label for="data6">Puntas de Osciloscopio:</label>
+                <input type="number" id="data6" name="data6">
+                <label for="data7">Puntas de Generador:</label>
+                <input type="number" id="data7" name="data7">
+                <label for="data8">Cables Banana - Caimán:</label>
+                <input type="number" id="data8" name="data8">
+                <label for="data9">Cables Caimán - Caimán:</label>
+                <input type="number" id="data9" name="data9">
+                <label for="data10">Cables Banana - Banana:</label>
+                <input type="number" id="data10" name="data10">
+                <label for="data11">Multímetro:</label>
+                <input type="number" id="data11" name="data11">
+                <label for="data12">Otros:</label>
+                <textarea id="data12" name="data12"></textarea>
             </div>
             <button type="submit">Enviar</button>
         </form>
