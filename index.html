@@ -69,15 +69,15 @@
         </form>
     </div>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzxPAzD7F6c3XXXXXXXXXXXXXXX/exec'  // Reemplaza esta URL con la URL de tu script de Google Apps
-        const form = document.forms['materialForm']
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzxPAzD7F6c3XXXXXXXXXXXXXXX/exec';  // Reemplaza esta URL con la URL de tu script de Google Apps
+        const form = document.forms['materialForm'];
 
         form.addEventListener('submit', e => {
-          e.preventDefault()
+          e.preventDefault();
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => alert('¡Solicitud enviada exitosamente!'))
-            .catch(error => console.error('Error!', error.message))
-        })
+            .catch(error => console.error('Error!', error.message));
+        });
     </script>
 </body>
 </html>
